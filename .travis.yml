@@ -1,0 +1,14 @@
+os: linux
+dist: focal
+
+language: ruby
+rvm: 2.7.1
+
+branches:
+  only:
+  - main
+  - secure-test
+  - prd-gpu-support
+
+import:
+  - gpu.yml
