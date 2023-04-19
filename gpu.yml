@@ -1,0 +1,60 @@
+jobs:
+  include:
+    - stage: "NON - GPU"
+      name: "it does not use gpu"
+      dist: focal
+      vm:
+        size: 'medium'
+      arch: 'amd64'
+      script:
+        - df -h
+        - lspci
+        - echo "It is done"
+    - stage: "GPU - without addons"
+      name: "without addons"
+      dist: focal
+      vm:
+        size: 'gpu-medium'
+      arch: 'amd64'
+      script:
+        - df -h
+        - lspci
+        - echo "It is done"
+    - stage: "GPU - without addons  -big"
+      name: "without addons -big"
+      dist: focal
+      vm:
+        size: 'gpu-xlarge'
+      arch: 'amd64'
+      script:
+        - df -h
+        - lspci
+        - echo "It is done"
+    - stage: "GPU - without addons - windows - this will be filtered out"
+      name: "without addons"
+      os: windows
+      vm:
+        size: 'gpu-medium'
+      arch: 'amd64'
+      script:
+        - echo "You should not see this"
+    - stage: "Installing addons on linux"
+      name: "addons xenial"
+      dist: xenial
+      addons:
+        tensorflow: 1.6.0
+        blender: 3.4.1
+      script:
+        - df -h
+        - blender -v
+        - echo "it is done"
+    - stage: "Installing addons on linux"
+      name: "addons focal - it fails installing tensorflow because of cache/dns"
+      dist: xenial
+      addons:
+        tensorflow: 1.6.0
+        blender: 3.4.1
+      script:
+        - df -h
+        - blender -v
+        - echo "it is done"
