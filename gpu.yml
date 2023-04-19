@@ -1,7 +1,7 @@
 jobs:
   include:
-    - stage: "NON - GPU"
-      name: "it does not use gpu"
+    - stage: "NO GPU"
+      name: "there is no gpu used"
       dist: focal
       vm:
         size: 'medium'
@@ -10,8 +10,8 @@ jobs:
         - df -h
         - lspci
         - echo "It is done"
-    - stage: "GPU - without addons"
-      name: "without addons"
+    - stage: "GPU - with no addons"
+      name: "with no addons"
       dist: focal
       vm:
         size: 'gpu-medium'
@@ -20,8 +20,8 @@ jobs:
         - df -h
         - lspci
         - echo "It is done"
-    - stage: "GPU - without addons  -big"
-      name: "without addons -big"
+    - stage: "GPU - with no addons x-large"
+      name: "without addons x-large"
       dist: focal
       vm:
         size: 'gpu-xlarge'
@@ -30,30 +30,36 @@ jobs:
         - df -h
         - lspci
         - echo "It is done"
-    - stage: "GPU - without addons - windows - this will be filtered out"
-      name: "without addons"
+    - stage: "GPU - with no addons - Windows Build - No Run"
+      name: "with no addons"
       os: windows
       vm:
         size: 'gpu-medium'
       arch: 'amd64'
       script:
-        - echo "You should not see this"
-    - stage: "Installing addons on linux"
-      name: "addons xenial"
+        - echo "No Build"
+    - stage: "Instal addons on linux"
+      name: "addons on xenial distribution"
       dist: xenial
       addons:
         tensorflow: 1.6.0
         blender: 3.4.1
+      vm:
+        size: 'gpu-xlarge'
+      arch: 'amd64'
       script:
         - df -h
         - blender -v
         - echo "it is done"
-    - stage: "Installing addons on linux"
-      name: "addons focal - it fails installing tensorflow because of cache/dns"
+    - stage: "Instal addons on linux"
+      name: "addons on xenial distribution"
       dist: xenial
       addons:
         tensorflow: 1.6.0
         blender: 3.4.1
+      vm:
+        size: 'gpu-medium'
+      arch: 'amd64'
       script:
         - df -h
         - blender -v
