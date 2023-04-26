@@ -1,4 +1,4 @@
-os: linux
+os: windows
 dist: focal
 vm:
   size: [gpu-medium | gpu-large | gpu-xlarge]
