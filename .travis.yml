@@ -1,9 +1,7 @@
 os: linux
 dist: focal
 vm:
-  size: 
-  - 'gpu-medium'
-  - 'gpu-large'
+  size: [gpu-medium | gpu-large | gpu-xlarge]
 language: ruby
 rvm: 2.7.1
 
