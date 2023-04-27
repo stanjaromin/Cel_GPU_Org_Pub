@@ -38,32 +38,6 @@ jobs:
 #       arch: 'amd64'
 #       script:
 #         - echo "No Build"
-#     - stage: "Instal addons on linux"
-#       name: "addons on xenial distribution"
-#       dist: xenial
-#       addons:
-#         tensorflow: 1.6.0
-#         blender: 3.4.1
-#       vm:
-#         size: 'gpu-xlarge'
-#       arch: 'amd64'
-#       script:
-#         - df -h
-#         - blender -v
-#         - echo "it is done"
-#     - stage: "Instal addons on linux"
-#       name: "addons on xenial distribution"
-#       dist: xenial
-#       addons:
-#         tensorflow: 1.6.0
-#         blender: 3.4.1
-#       vm:
-#         size: 'gpu-medium'
-#       arch: 'amd64'
-#       script:
-#         - df -h
-#         - blender -v
-#         - echo "it is done"
     - stage: "Instal addons on linux"
       name: "addons on focal distribution gpu xlarge"
       dist: focal
@@ -72,22 +46,6 @@ jobs:
         blender: 3.4.1
       vm:
         size: 'gpu-xlarge'
-      language: python
-      python:
-        - "3.9"
-      arch: 'amd64'
-      script:
-        - df -h
-        - lspci
-        - python hello_world.py
-    - stage: "Instal addons on linux"
-      name: "addons on focal distribution gpu large"
-      dist: focal
-      addons:
-        tensorflow: 1.6.0
-        blender: 3.4.1
-      vm:
-        size: 'gpu-large'
       language: python
       python:
         - "3.9"
@@ -111,4 +69,4 @@ jobs:
       script:
         - df -h
         - lspci
-        - python hello_world.py 
+        - python hello_world.py
