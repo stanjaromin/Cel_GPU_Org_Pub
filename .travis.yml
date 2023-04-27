@@ -1,15 +1,10 @@
-os: windows
+os: linux
 dist: focal
-vm:
-  size: [gpu-medium | gpu-large | gpu-xlarge]
-language: ruby
-rvm: 2.7.1
+language: python
 
 branches:
   only:
   - main
-  - secure-test
-  - prd-gpu-support
 
 import:
   - gpu.yml
