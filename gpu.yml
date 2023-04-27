@@ -65,13 +65,13 @@ jobs:
 #         - blender -v
 #         - echo "it is done"
     - stage: "Instal addons on linux"
-      name: "addons on focal distribution gpu medium"
+      name: "addons on focal distribution gpu xlarge"
       dist: focal
       addons:
         tensorflow: 1.6.0
         blender: 3.4.1
       vm:
-        size: 'gpu-medium'
+        size: 'gpu-xlarge'
       language: python
       python:
         - "3.9"
@@ -97,13 +97,13 @@ jobs:
         - lspci
         - python hello_world.py
     - stage: "Instal addons on linux"
-      name: "addons on focal distribution gpu xlarge"
+      name: "addons on focal distribution gpu medium"
       dist: focal
       addons:
         tensorflow: 1.6.0
         blender: 3.4.1
       vm:
-        size: 'gpu-xlarge'
+        size: 'gpu-medium'
       language: python
       python:
         - "3.9"
