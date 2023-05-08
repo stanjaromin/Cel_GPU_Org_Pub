@@ -79,4 +79,4 @@ while (time.time() - start_time) < DURATION:
     time.sleep(60)
 
 print("Script has finished running for 185 mins by printing every 5 mins")
-print("hello world")
+# print("hello world")
