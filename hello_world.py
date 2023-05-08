@@ -78,5 +78,5 @@ while (time.time() - start_time) < DURATION:
     # Sleep for 1 minute
     time.sleep(60)
 
-print("Script has finished running for 185 mins by printing every 5 mins")
+print("Script has finished running for 185 mins by printing every 5 mins!")
 # print("hello world")
