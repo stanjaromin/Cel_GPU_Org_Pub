@@ -1,4 +1,4 @@
-# import time
+import time
 # #loop for more than 10 mins
 # # Set the duration to run the script
 # DURATION = 11 * 60  # 11 minutes in seconds
