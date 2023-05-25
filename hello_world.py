@@ -52,6 +52,7 @@ while (time.time() - start_time) < DURATION:
     time.sleep(60)
 
 print("Script has finished running for 65 mins by printing every 5 mins anything.")
+print("Retested by Stan")
 
 
 # #loop for more than 225 mins
