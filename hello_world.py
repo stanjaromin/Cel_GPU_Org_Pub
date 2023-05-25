@@ -38,6 +38,9 @@ INTERVAL = 5 * 60  # 5 minutes in seconds
 # Get the start time
 start_time = time.time()
 
+# Hard Limit 50 added
+print("Hard Limit 50 min added in admin v2")
+
 # Run the script
 while (time.time() - start_time) < DURATION:
     # Calculate the remaining time
