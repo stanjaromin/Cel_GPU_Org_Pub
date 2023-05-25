@@ -38,7 +38,7 @@ INTERVAL = 5 * 60  # 5 minutes in seconds
 # Get the start time
 start_time = time.time()
 
-# Hard Limit 50 added
+# Hard Limit 50 added to admin
 print("Hard Limit 50 min added in admin v2")
 
 # Run the script
